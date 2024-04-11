@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission Results</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="results-container">
+    <h1>Submission Results</h1>
+    <div id="result">
+        <!-- Results will be displayed here -->
+    </div>
+</div>
+
+<script>
+window.onload = function() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `<p>Name: ${params.name || 'Not provided'}</p><p>Email: ${params.email || 'Not provided'}</p>`;
+};
+</script>
+
+</body>
+</html>

@@ -41,3 +41,14 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+.results-container {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.results-container h1, .form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
