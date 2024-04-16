@@ -1,0 +1,154 @@
+%!TEX root = ./paper.tex
+
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage[usenames,dvipsnames]{color}% conflict with acmart
+%\usepackage{times}
+\usepackage{microtype}
+%\usepackage{pdfsync} including this adds a blank page at beginning when using acmart
+  \usepackage{amsthm,bm}
+  \usepackage{fullpage}
+\usepackage{amsmath,amsfonts,amssymb} %hide for acmart
+\usepackage{tabu} % detect if table is in math mode
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{footnote}
+\usepackage{framed}
+%\usepackage{caption} duplicate
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{enumitem}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes,shadows,arrows,fit}
+
+\usepackage{adjustbox}
+%\usepackage{amssymb} hide for acmart
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{anyfontsize}
+\usepackage{booktabs}
+%\usepackage[font={small}]{caption} duplicate
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{enumitem}
+\usepackage{framed}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[pdfstartview=FitH,colorlinks,urlcolor=black,linkcolor=black,citecolor=black,pdfpagelabels,bookmarksopen=true]{hyperref} %hide for acmart
+\usepackage{letltxmacro}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{pgfplotstable}
+\usepackage{pgfplots}
+\usepackage{scalefnt}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{xspace}
+\usepackage{titlesec}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage[most]{tcolorbox}
+\usepackage{lipsum}
+\usepackage{cleveref}
+
+\newcommand{\ignore}[1]{}
+
+\numberwithin{equation}{section}
+
+%fields and groups
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\C}{\mathbb{C}} hide for acmart
+\newcommand{\Qbar}{\overline{\Q}}
+%\newcommand{\G}{\mathbb{G}} hide for acmart
+\newcommand{\Vs}{\mathbb{V}}
+\newcommand{\Fbar}{\overline{\mathbb{F}}}
+
+\newcommand{\todo}[1]{{\color{red} {\bf TODO}:~{#1}}}
+\newcommand{\note}[1]{{\color{blue} {\bf NOTE}:~{#1}}}
+\newcommand{\btodo}[1]{{\color{blue} {\bf TODO}:~{#1}}}
+\newcommand{\ltodo}[2]{{\color{blue} {\bf TODO (locked by {#1})}:~{#2}}}
+\newcommand{\lbtodo}[2]{{\color{blue} {\bf TODO (locked by {#1}}:~{#2}}}
+
+\renewcommand{\paragraph}[1]{\medskip\noindent {\bf {#1}}}
+
+
+\newcommand{\calA}{\ensuremath{\mathcal{A}}}
+\newcommand{\calB}{\ensuremath{\mathcal{B}}}
+\newcommand{\calC}{\ensuremath{\mathcal{C}}}
+\newcommand{\calD}{\ensuremath{\mathcal{D}}}
+\newcommand{\calE}{\ensuremath{\mathcal{E}}}
+\newcommand{\calF}{\ensuremath{\mathcal{F}}}
+\newcommand{\calG}{\ensuremath{\mathcal{G}}}
+\newcommand{\calH}{\ensuremath{\mathcal{H}}}
+\newcommand{\calI}{\ensuremath{\mathcal{I}}}
+\newcommand{\calJ}{\ensuremath{\mathcal{J}}}
+\newcommand{\calK}{\ensuremath{\mathcal{K}}}
+\newcommand{\calL}{\ensuremath{\mathcal{L}}}
+\newcommand{\calM}{\ensuremath{\mathcal{M}}}
+\newcommand{\calN}{\ensuremath{\mathcal{N}}}
+\newcommand{\calO}{\ensuremath{\mathcal{O}}}
+\newcommand{\calP}{\ensuremath{\mathcal{P}}}
+\newcommand{\calQ}{\ensuremath{\mathcal{Q}}}
+\newcommand{\calR}{\ensuremath{\mathcal{R}}}
+\newcommand{\calS}{\ensuremath{\mathcal{S}}}
+\newcommand{\calT}{\ensuremath{\mathcal{T}}}
+\newcommand{\calU}{\ensuremath{\mathcal{U}}}
+\newcommand{\calV}{\ensuremath{\mathcal{V}}}
+\newcommand{\calW}{\ensuremath{\mathcal{W}}}
+\newcommand{\calX}{\ensuremath{\mathcal{X}}}
+\newcommand{\calY}{\ensuremath{\mathcal{Y}}}
+\newcommand{\calZ}{\ensuremath{\mathcal{Z}}}
+
+% THEOREMS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Theorem definitions
+
+  \theoremstyle{plain} \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{claim}[theorem]{Claim}
+  \newtheorem{proposition}[theorem]{Proposition}
+  \newtheorem{corollary}[theorem]{Corollary}
+
+  \theoremstyle{definition} \newtheorem{defn}[theorem]{Definition}
+  \newtheorem{remark}[theorem]{Remark}
+  \newtheorem{definition}[theorem]{Definition} \newtheorem{rem}[theorem]{Remark}
+  %\newtheorem{alg}[theorem]{Algorithm}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{protocol}[theorem]{Protocol}
+\newtheorem{fact}[theorem]{Fact}
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+    \newcommand{\Theorem}[1]{\hyperref[#1]{Theorem~\ref*{#1}}}
+    \newcommand{\Lemma}[1]{\hyperref[#1]{Lemma~\ref*{#1}}}
+    \newcommand{\Corollary}[1]{\hyperref[#1]{Corollary~\ref*{#1}}}
+    \newcommand{\Definition}[1]{\hyperref[#1]{Definition~\ref*{#1}}}
+    \newcommand{\Example}[1]{\hyperref[#1]{Example~\ref*{#1}}}
+    \newcommand{\Remark}[1]{\hyperref[#1]{Remark~\ref*{#1}}}
+    \newcommand{\Fact}[1]{\hyperref[#1]{Fact~\ref*{#1}}}
+    \newcommand{\Table}[1]{\hyperref[#1]{Table~\ref*{#1}}}
+    \newcommand{\Figure}[1]{\hyperref[#1]{Fig.~\ref*{#1}}}
+    \newcommand{\Section}[1]{\hyperref[#1]{Section~\ref*{#1}}}
+    \newcommand{\Sections}[1]{\hyperref[#1]{Sections~\ref*{#1}}}
+    \newcommand{\Appendix}[1]{\hyperref[#1]{Appendix~\ref*{#1}}}
+    \newcommand{\Protocol}[1]{\hyperref[#1]{Protocol~\ref*{#1}}}
+    \newcommand{\Equation}[1]{\hyperref[#1]{{(\ref*{#1})}}}
+
+\newcommand{\poly}{\ms{poly}}
+\newcommand{\negl}{\ms{negl}}
+
+
+\newcommand{\sk}{\ms{sk}}
+\newcommand{\vk}{\ms{vk}}
+\newcommand{\ct}{\ms{ct}}
+\newcommand{\hyb}{\ms{Hyb}}
+
+\newcommand{\zostar}{\zo^*}
+
+\newcommand{\rgets}{\mathrel{\mathpalette\rgetscmd\relax}}
+\newcommand{\getsr}{\rgets}
+
