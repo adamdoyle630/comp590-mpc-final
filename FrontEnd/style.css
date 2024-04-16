@@ -1,11 +1,34 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.results-link {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .form-container {
     margin: auto;
     width: 50%;
-    padding: 10px;
+    padding: 20px;
 }
 
 .form-group {
@@ -42,9 +65,10 @@ button:hover {
     background-color: #45a049;
 }
 
-.results-container {
-    margin: auto;
+/* Added for the results and title alignment */
+.results-container, .form-container {
     width: 50%;
+    margin: auto;
     padding: 10px;
 }
 
