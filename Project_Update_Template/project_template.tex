@@ -5,7 +5,7 @@
 
 \begin{document}
 
-\title{comp590-mpc-final}
+\title{MPC for Secure Data Analysis in Higher Education}
 
 
 \author{\IEEEauthorblockN{Kevin Dong}
@@ -22,9 +22,6 @@
 \maketitle
 
 \begin{abstract}
-
-
-A brief description of the project.
 
 This project seeks to implement Multi-Party Computation (MPC) techniques to securely gather and analyze sensitive data about the student body at the University of North Carolina without compromising individual privacy.
 Using a combination of frontend and backend technologies, the project will collect data on various metrics such as average academic tenure, financial aid received, family income levels, and GPA, among others. 
@@ -52,7 +49,57 @@ The implementation of this project not only aims to enhance the strategic planni
 
 \section{Solution Overview}
 
-This brief overview of your solution should give enough detail to convince the reader that you know exactly how you're going to solve the technical problems involved in your proposed project.
+This brief overview of your solution should give enough detail to convince the reader that you know exactly how you're going to solve the technical problems involved in your proposed project. The approach leverages multi-party computation (MPC) techniques to ensure privacy-preserving computations across distributed servers. Below is a sample implementation showing how Beaver's triples are utilized in conjunction with masking techniques to perform secure, distributed calculations.
+
+\begin{lstlisting}[language=Python, caption={Sample MPC Implementation Using Beaver's Triples}, label={lst:mpc_code}]
+a_shares, b_shares, c_shares = MPC_Functions.generate_beavers(4)
+
+servers = [server1, server2, server3, server4]
+server1_zshares = []
+server2_zshares = []
+server3_zshares = []
+server4_zshares = []
+zshares = [server1_zshares, server2_zshares, server3_zshares, server4_zshares]
+
+for i in range(len(server1)):
+    d_shares = []
+    e_shares = []
+
+    for index, server in enumerate(servers):
+        if index == 0:
+            d_share, e_share = MPC_Functions.generate_beaver_mask(server[i] - mean, server[i] - mean, a_shares[index], b_shares[index])
+            d_shares.append(d_share)
+            e_shares.append(e_share)
+            continue
+
+        d_share, e_share = MPC_Functions.generate_beaver_mask(server[i], server[i], a_shares[index], b_shares[index])
+        d_shares.append(d_share)
+        e_shares.append(e_share)
+
+    z_shares = []
+
+    for index, server in enumerate(servers):
+        curr_d_shares = d_shares[:index] + d_shares[index + 1:]
+        curr_e_shares = e_shares[:index] + e_shares[index + 1:]
+
+        if index == 0:
+            z = MPC_Functions.beaver_compute(server[i] - mean, server[i] - mean, a_shares[index], b_shares[index], c_shares[index], curr_d_shares, curr_e_shares, True)
+            z_shares.append(z)
+            continue
+
+        z = MPC_Functions.beaver_compute(server[i], server[i], a_shares[index], b_shares[index], c_shares[index], curr_d_shares, curr_e_shares)
+        z_shares.append(z)
+
+    for index, server in enumerate(zshares):
+        server.append(z_shares[index])
+
+server_sums = []
+for share in zshares:
+    server_sums.append(MPC_Functions.calculate_sum_of_shares(share))
+
+print("Standard Deviation:", math.sqrt(MPC_Functions.calculate_sum_of_shares(server_sums)/len(message_shares)))
+\end{lstlisting}
+
 
 \section{Progress Update}
 
