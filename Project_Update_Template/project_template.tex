@@ -23,6 +23,9 @@
 
 \begin{abstract}
 
+
+A brief description of the project.
+
 This project seeks to implement Multi-Party Computation (MPC) techniques to securely gather and analyze sensitive data about the student body at the University of North Carolina without compromising individual privacy.
 Using a combination of frontend and backend technologies, the project will collect data on various metrics such as average academic tenure, financial aid received, family income levels, and GPA, among others. 
 The goal is to calculate not only averages but also medians, standard deviations, and to perform linear regression analyses between selected variables. 
@@ -34,6 +37,10 @@ This allows for a deep, analytical, yet secure insight into demographic patterns
 
 
 \section{Introduction}
+
+% This document provides a template for the project update. The introduction should motivate and explain your project goals. The introduction should make clear to someone who reads the paper why this is a worthwhile project to work on and explain the real-world problems that the project will solve.
+
+% It may be helpful to cite various sources throughout the project update and final paper. You can cite papers like this~\cite{item1}.
 
 In an era where data privacy has become paramount, educational institutions face significant challenges in collecting and analyzing student data without violating privacy norms and regulations. Multi-Party Computation (MPC) offers a promising solution to this dilemma by allowing multiple parties to compute functions over their inputs while keeping those inputs private. The relevance of MPC in secure data analysis has been extensively documented, with successful applications ranging from secure auctions to privacy-preserving data mining~\cite{MPC1}.
 
@@ -50,6 +57,31 @@ This brief overview of your solution should give enough detail to convince the r
 \section{Progress Update}
 
 Be sure to include the following in your update:
+\section*{Project Update}
+
+\subsection*{Accomplishments}
+
+\begin{itemize}
+    \item \textbf{Frontend Setup:} We have successfully set up a working frontend for our project.
+    
+    \item \textbf{Cloud Function Development:} We have developed a functional cloud function to handle data input and perform linear regression analysis. While this function is not finalized, it currently computes the slope and intercept of a linear regression model based on the provided data. 
+    
+    \item \textbf{Algorithm Development:} We have developed algorithms to compute essential statistical metrics including standard deviation, correlation, and linear regression for our model.
+\end{itemize}
+
+\subsection*{Contributions of Team Members}
+
+\begin{itemize}
+    \item \textbf{Swagat:} Swagat has primarily worked on drafting the cloud function responsible for inputting data and outputting the slope and intercept of the linear regression model.
+    
+    \item \textbf{Praj:} Praj has focused on developing algorithms to calculate standard deviation, correlation, and linear regression for our model.
+\end{itemize}
+
+\subsection*{Project Repository}
+
+Our project code is hosted on GitHub. You can access it at the following link:
+\url{https://github.com/adamdoyle630/comp590-mpc-final}
+
 \begin{itemize}
 \item What has been accomplished so far.
 
