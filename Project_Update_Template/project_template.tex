@@ -44,9 +44,9 @@ This allows for a deep, analytical, yet secure insight into demographic patterns
 
 In an era where data privacy has become paramount, educational institutions face significant challenges in collecting and analyzing student data without violating privacy norms and regulations. Multi-Party Computation (MPC) offers a promising solution to this dilemma by allowing multiple parties to compute functions over their inputs while keeping those inputs private. The relevance of MPC in secure data analysis has been extensively documented, with successful applications ranging from secure auctions to privacy-preserving data mining~\cite{MPC1}.
 
-At the University of North Carolina, there is a substantial need to understand the student body's demographics, academic performance, financial needs, and overall well-being without exposing individual data. This project aims to implement an MPC framework to gather and analyze such data securely. Specifically, the framework will handle sensitive information such as GPA, financial aid details, and family income, enabling the university to derive insightful analytics like average study durations, aid distributions, and academic performance indicators across various demographics~\cite{MPC2}.
+At the University of North Carolina, there is a substantial need to understand the student body's demographics, academic performance, financial needs, and overall well-being without exposing individual data. This project aims to implement an MPC framework to gather and analyze such data securely. Specifically, the framework will handle sensitive information such as GPA, financial aid details, and family income, enabling the university to derive insightful analytics like average study durations, aid distributions, and academic performance indicators across various demographics without revealing or compromising sensitive personal data.
 
-By leveraging front-end and back-end technologies to encrypt and split data into shares distributed among multiple databases, this project ensures that no single entity can reconstruct or access the entirety of the sensitive data, thus adhering to privacy standards. Such methodologies are aligned with current trends in secure computations and the increasing demand for privacy-preserving analytical techniques in higher education~\cite{PrivacyTrends}.
+By leveraging front-end and back-end technologies to encrypt and split data into shares distributed among multiple databases, this project ensures that no single entity can reconstruct or access the entirety of the sensitive data, thus adhering to privacy standards. Such methodologies are aligned with current trends in secure computations and the increasing demand for privacy-preserving analytical techniques in higher education.
 
 The implementation of this project not only aims to enhance the strategic planning and resource allocation at the university but also serves as a model for other institutions grappling with similar issues. This introduction sets the stage for a detailed discussion on the project's objectives, the technology stack involved, and the preliminary results obtained from the initial implementation stages.
 
@@ -56,17 +56,14 @@ This brief overview of your solution should give enough detail to convince the r
 
 \section{Progress Update}
 
-Be sure to include the following in your update:
-\section*{Project Update}
-
 \subsection*{Accomplishments}
 
 \begin{itemize}
-    \item \textbf{Frontend Setup:} We have successfully set up a working frontend for our project.
+    \item \textbf{Frontend Setup:} We have successfully set up a working frontend for our project, which currently consists of a basic HTML form for user input that will eventually be parsed and sent to our backend server. 
     
-    \item \textbf{Cloud Function Development:} We have developed a functional cloud function to handle data input and perform linear regression analysis. While this function is not finalized, it currently computes the slope and intercept of a linear regression model based on the provided data. 
+    \item \textbf{Cloud Function Development:} We have developed a cloud function to handle data input and perform linear regression analysis. While this function is not finalized, it currently computes the slope and intercept of a linear regression model based on the provided data. 
     
-    \item \textbf{Algorithm Development:} We have developed algorithms to compute essential statistical metrics including standard deviation, correlation, and linear regression for our model.
+    \item \textbf{Algorithm Development:} We have developed algorithms to compute essential statistical metrics including standard deviation, correlation, and linear regression for our model.~\cite{MPC1}
 \end{itemize}
 
 \subsection*{Contributions of Team Members}
@@ -75,35 +72,20 @@ Be sure to include the following in your update:
     \item \textbf{Swagat:} Swagat has primarily worked on drafting the cloud function responsible for inputting data and outputting the slope and intercept of the linear regression model.
     
     \item \textbf{Praj:} Praj has focused on developing algorithms to calculate standard deviation, correlation, and linear regression for our model.
+
+    \item \textbf{Adam:} Adam has primarily responsible for creating and configuring the GitHub repository for this project and is currently drafting ideas for the server configurations needed to simulate MPC, with the main challenge being creating multiple servers that are independent and secure from each other. 
 \end{itemize}
 
 \subsection*{Project Repository}
 
-Our project code is hosted on GitHub. You can access it at the following link:
-\url{https://github.com/adamdoyle630/comp590-mpc-final}
-
-\begin{itemize}
-\item What has been accomplished so far.
-
-\item What each team member has done.
-
-\item A GitHub (or other source code repository) link to your project code.
-\end{itemize}
-
-Remember that your project update should be 2-3 pages long, excluding references and appendices.
-
-You can also use this template for your final report, but remember that there will be additional sections that you need to add for that part.
+Our project code is hosted on GitHub. The main branch contains all frontend and backend code as well as this document. You can access it at the following link:
+\url{https://github.com/adamdoyle630/comp590-mpc-final}.
 
 \begin{thebibliography}{9}
 
-\bibitem{item1}
-Author name. "Title of Paper." Publication venue, year.
+\bibitem{MPC1}
+The code written for the MPC functions is modeled after the MPC lab provided in class.
 
 \end{thebibliography}
-
-\appendices
-\section{Supplementary content}
-
-\todo{Delete this section if there isn't any supplementary material}
 
 \end{document}
