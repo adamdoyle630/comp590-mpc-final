@@ -19,6 +19,20 @@
 \usepackage{multirow}
 \usepackage{enumitem}
 
+\usepackage{listings}
+\usepackage{color}  % Optional for adding colors
+
+\lstset{
+    language=Python,               % set programming language
+    basicstyle=\footnotesize\ttfamily, % set font and size
+    keywordstyle=\color{blue},     % set keyword color
+    commentstyle=\color{gray},     % set comment color
+    stringstyle=\color{red},       % set string color
+    breaklines=true,               % enable line breaking
+    showstringspaces=false         % hide spaces in strings
+}
+
+
 \usepackage{tikz}
 \usetikzlibrary{calc,positioning,shapes,shadows,arrows,fit}
 
@@ -50,8 +64,6 @@
 \usepackage[most]{tcolorbox}
 \usepackage{lipsum}
 \usepackage{cleveref}
-\usepackage{hyperref}
-
 
 \newcommand{\ignore}[1]{}
 
