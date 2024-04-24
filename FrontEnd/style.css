@@ -1,78 +1,116 @@
+/* Overall body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
+/* Top navigation styling */
 .top-nav {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f2f2f2;
-    padding: 10px 20px;
 }
 
-.title {
+.top-nav .title {
     margin: 0;
     font-size: 24px;
 }
 
-.results-link {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
+.top-nav .results-link {
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
+    font-size: 18px;
 }
 
+/* Form container styling */
 .form-container {
-    margin: auto;
-    width: 50%;
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 label {
+    display: block;
     margin-bottom: 5px;
-    display: inline-block;
+    font-size: 16px;
+    color: #666;
 }
 
-input[type="text"], input[type="email"] {
+input[type="number"],
+input[type="text"],
+input[type="email"] {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Adds padding and border to the element's total width and height */
 }
 
 button {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    background-color: #0056b3;
+    color: #ffffff;
     border: none;
-    border-radius: 4px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
     cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #004494;
 }
 
-/* Added for the results and title alignment */
-.results-container, .form-container {
-    width: 50%;
-    margin: auto;
-    padding: 10px;
-}
-
-.results-container h1, .form-container h1 {
+/* Results container styling */
+.results-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
     text-align: center;
-    margin-bottom: 20px;
 }
+
+.results-container h1 {
+    color: #333;
+}
+
+/* About Section Styling */
+.about-section {
+    background-color: #e8f4fd;  /* Light blue background for a soft look */
+    border-left: 5px solid #0056b3;  /* Solid blue left border for emphasis */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.about-section h2 {
+    color: #0056b3;  /* Blue color for the heading to match the theme */
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.6;  /* Increased line height for better readability */
+    color: #333;  /* Dark grey text for better contrast on light background */
+}
+

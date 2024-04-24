@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Form Submission Results</title>
+    <title>Age and GPA Submission Results</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@ window.onload = function() {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
     const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = `<p>Name: ${params.name || 'Not provided'}</p><p>Email: ${params.email || 'Not provided'}</p>`;
+    resultDiv.innerHTML = `<p>Age: ${params.age || 'Not provided'}</p><p>GPA: ${params.gpa || 'Not provided'}</p>`;
 };
 </script>
 
