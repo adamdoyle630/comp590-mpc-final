@@ -5,7 +5,7 @@ document.getElementById('userForm').addEventListener('submit', function(e) {
         gpa: document.getElementById('gpa').value
     };
     
-    fetch('https://your-api-endpoint.com/users', {
+    fetch('https://us-central1-outstanding-map-421217.cloudfunctions.net/function-1', {
         method: 'POST',
         mode: 'no-cors', // Added to bypass CORS issues for development
         headers: {
