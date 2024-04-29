@@ -86,3 +86,27 @@ A successful response will make the MPC calculations and return the standard dev
 {
     "sd": 1.0
 }
+```
+
+### Endpoint
+`POST /calculate_correlation`
+
+### Request Body
+JSON object must follow the below format. Valid values for the "statistic1" and "statistic2" fields are `"gpa"`, `"age"`, and `"financial_aid"`.
+
+```json
+{
+    "statistic1": "gpa",
+    "statistic2": "age",
+}
+```
+
+### Response
+
+A successful response will make the MPC calculations and return the correlation for the specified statistic.
+
+```json
+{
+    "data": 1.0
+}
+```
