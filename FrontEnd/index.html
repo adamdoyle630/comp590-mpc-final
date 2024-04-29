@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Age and GPA Submission Example (maybe financial aid? number of classes?</title>
+    <title>Student Data Submission Form</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -26,6 +26,10 @@
         <div class="form-group">
             <label for="gpa">GPA (required, max 4.0):</label>
             <input type="number" step="0.01" id="gpa" name="gpa" min="0.0" max="4.0" required placeholder="Enter your GPA (0.0-4.0)">
+        </div>
+        <div class="form-group">
+            <label for="financial_aid">Total Financial Aid Received:</label>
+            <input type="number" id="financial_aid" name="financial_aid" min="0.0" required placeholder="Enter a numerical value">
         </div>
         <button type="submit">Submit</button>
     </form>
