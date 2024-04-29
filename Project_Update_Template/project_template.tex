@@ -27,7 +27,7 @@ This project seeks to implement Multi-Party Computation (MPC) techniques to secu
 Using a combination of frontend and backend technologies, the project will collect data on various metrics such as average academic tenure, financial aid received, family income levels, and GPA, among others. 
 The goal is to calculate not only averages but also medians, standard deviations, and to perform linear regression analyses between selected variables. 
 By splitting data into encrypted shares that are stored across multiple databases, the system ensures that no single party can access comprehensive personal data, thereby maintaining privacy and security. 
-Initial phases have included the development of a responsive frontend user interface and the backend setup for data encryption and distribution. 
+Preliminary works have included the development of a responsive frontend user interface and the backend setup for data encryption and distribution. 
 This allows for a deep, analytical, yet secure insight into demographic patterns, academic performance, and other crucial metrics, allowing for crucial insights for the university in allocating resources in addressing need areas. 
 
 \end{abstract}
@@ -39,23 +39,23 @@ This allows for a deep, analytical, yet secure insight into demographic patterns
 
 % It may be helpful to cite various sources throughout the project update and final paper. You can cite papers like this~\cite{item1}.
 
-In an era where data privacy has become paramount, educational institutions face significant challenges in collecting and analyzing student data without violating privacy norms and regulations. Multi-Party Computation (MPC) offers a promising solution to this dilemma by allowing multiple parties to compute functions over their inputs while keeping those inputs private. The relevance of MPC in secure data analysis has been extensively documented, with successful applications ranging from secure auctions to privacy-preserving data mining~\cite{MPC1}.
+In an era where data privacy has become crucial to maintaining anonymity, educational institutions face significant challenges in collecting and analyzing student data without violating privacy norms and regulations. Multi-Party Computation (MPC) offers a solution to this dilemma by allowing multiple parties to compute functions over their inputs while keeping those inputs private. The relevance of MPC in secure data analysis has been extensively documented, with successful applications ranging from secure auctions to privacy-preserving data mining~\cite{MPC1}.
 
 At the University of North Carolina, there is a substantial need to understand the student body's demographics, academic performance, financial needs, and overall well-being without exposing individual data. This project aims to implement an MPC framework to gather and analyze such data securely. Specifically, the framework will handle sensitive information such as GPA, financial aid details, and family income, enabling the university to derive insightful analytics like average study durations, aid distributions, and academic performance indicators across various demographics without revealing or compromising sensitive personal data.
 
 By leveraging front-end and back-end technologies to encrypt and split data into shares distributed among multiple databases, this project ensures that no single entity can reconstruct or access the entirety of the sensitive data, thus adhering to privacy standards. Such methodologies are aligned with current trends in secure computations and the increasing demand for privacy-preserving analytical techniques in higher education.
 
-The implementation of this project not only aims to enhance the strategic planning and resource allocation at the university but also serves as a model for other institutions grappling with similar issues. This introduction sets the stage for a detailed discussion on the project's objectives, the technology stack involved, and the preliminary results obtained from the initial implementation stages.
+The implementation of this project aims to enhance the strategic planning and resource allocation at the university but also serves as a model for other institutions grappling with similar issues. This update offers a detailed discussion on the project's objectives, the technology stack involved, and the preliminary results obtained from the initial implementation stages.
 
 \section{Solution Overview}
 
-This brief overview of your solution should give enough detail to convince the reader that you know exactly how you're going to solve the technical problems involved in your proposed project. The approach leverages multi-party computation (MPC) techniques to ensure privacy-preserving computations across distributed servers. Below is a sample implementation showing how Beaver's triples are utilized in conjunction with masking techniques to perform secure, distributed calculations.
+In the development of a secure Multi-Party Computation (MPC) library, we focused on creating functionalities crucial for collaborative data processing without compromising individual privacy. The library includes methods for generating and managing shares across distinct servers, ensuring data security by keeping individual inputs encrypted and only making aggregated data public. We utilized Beaver triples and masks for secure operations such as multiplications, essential in MPC protocols. The prime modulus \( P \) set to \( 2^{32} - 1 \) provides a robust framework for operations by maintaining calculations within a finite field. The library supports computations of statistical measures like mean and standard deviation securely, with plans to extend this to calculating correlation coefficients. This approach maintains the confidentiality of individual data while enabling the extraction of valuable statistical information from aggregated server data.
 
 \begin{lstlisting}[language=Python, caption={Sample MPC Implementation Using Beaver's Triples}, label={lst:mpc_code}]
 a_shares, b_shares, c_shares = MPC_Functions.generate_beavers(4)
 
 servers = [server1, server2, server3, server4]
-server1_zshares = []
+server1_zshares = []    
 server2_zshares = []
 server3_zshares = []
 server4_zshares = []
@@ -123,6 +123,8 @@ print("Standard Deviation:", math.sqrt(MPC_Functions.calculate_sum_of_shares(ser
     \item \textbf{Adam:} Adam has primarily responsible for creating and configuring the GitHub repository for this project and is currently drafting ideas for the server configurations needed to simulate MPC, with the main challenge being creating multiple servers that are independent and secure from each other. 
     
     \item \textbf{Kevin:} Kevin has been focused on developing the front end using HTML, CSS, and Javascript. Currently working on connecting it with the backend. 
+
+    \item \textbf{Andre:} Andre has been focused on developing the backend alongside Adam and looking for mock data online to simulate execution and test function of the model. 
 \end{itemize}
 
 \subsection*{Project Repository}
