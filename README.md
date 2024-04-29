@@ -9,7 +9,7 @@ This project implements Multi-Party Computation (MPC) with a frontend interface 
 # API Overview
 
 Below is an overview of the API endpoints implemented in this application. 
-Base URL: https://us-east1-outstanding-map-421217.cloudfunctions.net
+API URL: https://us-east1-outstanding-map-421217.cloudfunctions.net
 
 ## Insert Data
 Takes various data points and divides them into shares among parties.
@@ -22,9 +22,9 @@ JSON object must follow the below format. Valid values for each field must be a 
 
 ```json
 {
-     "gpa": 3.5,
-	 "age": 18,
-     "financial_aid": 5000
+    "gpa": 3.5,
+	"age": 18,
+    "financial_aid": 5000
 }
 ```
 
@@ -80,7 +80,7 @@ JSON object must follow the below format. Valid values for the "statistic" field
 
 ### Response
 
-A successful response will make the MPC calculations and return the mean for the specified statistic.
+A successful response will make the MPC calculations and return the standard deviation for the specified statistic.
 
 ```json
 {
