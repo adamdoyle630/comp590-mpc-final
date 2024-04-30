@@ -87,6 +87,9 @@ A successful response will make the MPC calculations and return the standard dev
     "sd": 1.0
 }
 ```
+## Calculate Correlation
+
+Calculates the correlation coefficient between two statistics using MPC calculations.
 
 ### Endpoint
 `POST /calculate_correlation`
